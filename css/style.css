@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  font-size: 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+  display: flex; /* 启用弹性布局 */
+  flex-direction: row; /* column, row-reverse, column-reverse */
+  flex-wrap: wrap; /* nowrap, wrap-reverse
+  flex-flow: <flex-direction> <flex-wrap>; 默认值 row nowrap */
+  justify-content: space-between; /* 均匀分布
+                   space-around; 等分后各项居中
+                   center; 居中
+                   flex-start; 居左（默认）
+                   flex-end; 居右 */
+  align-items: center; /*
+               flex-start; 上对齐
+               flex-end; 下对齐
+               baseline; 第一行文字基线对齐
+               stretch; 如果 item 未设置高度或高度为 auto，将占满整个容器的高度（默认） */
+  align-content: center; /* 多根轴线时对齐方式，只有一根轴线时不起作用
+                 flex-start;
+                 flex-end;
+                 space-between;
+                 space-around;
+                 stretch; （默认） */
+}
+
+.nav > li {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: peru; /* 
+  order: <integer>; 定义项目的排列顺序。数值越小，排列越靠前，默认为 0 */
+  flex-grow: 1; /* 定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大
+  flex-shrink: <number>; 定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小
+  flex-basis: <length> | auto; 定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 auto，即项目的本来大小
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]; 是 flex-grow, flex-shrink 和 flex-basis的简写，默认值为 0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)
+  align-self: auto | flex-start | flex-end | center | baseline | stretch; 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch */
+}
